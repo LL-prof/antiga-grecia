@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antigua Grecia – Preguntas 3</title>
+  <style>
+
+    * { box-sizing: border-box; }
+    body{
+      margin: 0;
+      height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #111;
+      overflow: hidden;
+    }
+    .wrap{
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      gap: 12px;
+    }
+    .audioBox{
+      border: 2px solid #111;
+      border-radius: 14px;
+      padding: 10px 12px;
+      flex: 0 0 auto;
+    }
+    .audioTitle{
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 6px;
+      letter-spacing: .5px;
+    }
+    audio{
+      width: 100%;
+      height: 40px;
+    }
+    .content{
+      flex: 1 1 auto;
+      border: 2px solid #111;
+      border-radius: 14px;
+      padding: 16px 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    @media (max-height: 520px){
+      .content{ overflow-y: auto; }
+    }
+    .titulo{
+      font-size: clamp(18px, 2.2vh, 26px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+      margin: 0;
+    }
+    .texto{
+      width: 100%;
+      max-width: 980px;
+      font-size: clamp(16px, 2.2vh, 26px);
+      line-height: 1.25;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .texto p{
+      margin: 0 0 10px 0;
+    }
+    .q{
+      border: 2px solid #111;
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .qText{
+      font-size: clamp(16px, 2.1vh, 24px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .3px;
+      line-height: 1.2;
+      margin: 0;
+    }
+    .options{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .opt{
+      border: 2px solid #111;
+      border-radius: 14px;
+      padding: 12px 10px;
+      font-size: clamp(15px, 2vh, 22px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .3px;
+      text-align: center;
+      user-select: none;
+    }
+    .opt:active{
+      opacity: 0.85;
+      transform: scale(0.99);
+    }
+    .nav{
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .nav a{
+      width: 49%;
+      border: 2px solid #111;
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-size: clamp(14px, 2vh, 18px);
+      font-weight: 900;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <section class="audioBox">
+      <div class="audioTitle">AUDIO DE LAS PREGUNTAS</div>
+      <audio controls preload="metadata">
+        <source src="audio/p3-preguntas.mp3" type="audio/mpeg">
+        TU NAVEGADOR NO SOPORTA AUDIO.
+      </audio>
+    </section>
+
+    <section class="content">
+      <p class="titulo">PREGUNTAS 3</p>
+
+      <div class="q">
+        <p class="qText">1) ¿DÓNDE CONTABAN HISTORIAS EN GRECIA?</p>
+        <div class="options">
+          <div class="opt">EN EL TEATRO</div>
+          <div class="opt">EN UNA NEVERA</div>
+        </div>
+      </div>
+
+      <div class="q">
+        <p class="qText">2) ¿QUIÉNES SALÍAN A CONTAR LA HISTORIA?</p>
+        <div class="options">
+          <div class="opt">ACTORES</div>
+          <div class="opt">PECES</div>
+        </div>
+      </div>
+
+      <div class="q">
+        <p class="qText">3) HOY, ¿QUÉ SE PARECE AL TEATRO?</p>
+        <div class="options">
+          <div class="opt">PELÍCULAS Y SERIES</div>
+          <div class="opt">SEMÁFOROS</div>
+        </div>
+      </div>
+
+      <div class="nav"><a href="parte-3.html">⬅ VOLVER</a><a href="parte-4.html">➡ SIGUIENTE</a></div>
+    </section>
+
+  </main>
+</body>
+</html>
