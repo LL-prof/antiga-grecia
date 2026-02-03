@@ -127,9 +127,69 @@
       align-items: center;
       justify-content: center;
     }
+    #checkBtn{
+  border: 2px solid #111;
+  border-radius: 14px;
+  padding: 12px;
+  font-size: clamp(16px, 2vh, 22px);
+  font-weight: 900;
+  text-transform: uppercase;
+  background: #fff;
+  cursor: pointer;
+}
+.opt.selected{
+  outline: 4px solid #000;
+}
+.opt.ok{
+  background: #b7f7c8;
+}
+.opt.bad{
+  background: #f7b7b7;
+}
 
   </style>
 </head>
+
+ <script>
+const questions = document.querySelectorAll('.q');
+
+questions.forEach(q => {
+  const opts = q.querySelectorAll('.opt');
+  opts.forEach(opt => {
+    opt.addEventListener('click', () => {
+      opts.forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+    });
+  });
+});
+
+document.getElementById('checkBtn').addEventListener('click', () => {
+  let allCorrect = true;
+
+  questions.forEach(q => {
+    const opts = q.querySelectorAll('.opt');
+    opts.forEach(opt => {
+      opt.classList.remove('ok','bad');
+    });
+
+    const selected = q.querySelector('.opt.selected');
+    if(selected){
+      if(selected.dataset.correct === "true"){
+        selected.classList.add('ok');
+      }else{
+        selected.classList.add('bad');
+        allCorrect = false;
+      }
+    }else{
+      allCorrect = false;
+    }
+  });
+
+  if(allCorrect){
+    console.log("TODO CORRECTO");
+  }
+});
+</script> 
 <body>
   <main class="wrap">
 
@@ -147,7 +207,7 @@
       <div class="q">
         <p class="qText">1) ¿CÓMO SE LLAMABA EL LUGAR DEL QUE HABLA EL AUDIO?</p>
         <div class="options">
-          <div class="opt">GRECIA</div>
+          <div class="opt" data-correct="true">GRECIA</div>
           <div class="opt">ROMA</div>
         </div>
       </div>
@@ -167,7 +227,7 @@
           <div class="opt">REYES</div>
         </div>
       </div>
-
+      <button id="checkBtn">CHECK</button>
       <div class="nav"><a href="index.html">⬅ VOLVER</a><a href="parte-2.html">➡ SIGUIENTE</a></div>
     </section>
 
