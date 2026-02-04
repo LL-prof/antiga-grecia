@@ -6,127 +6,191 @@
   <title>Antigua Grecia – Preguntas 4</title>
   <style>
 
-    * { box-sizing: border-box; }
-    body{
-      margin: 0;
-      height: 100vh;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #fff;
-      color: #111;
-      overflow: hidden;
-    }
-    .wrap{
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      padding: 16px;
-      gap: 12px;
-    }
-    .audioBox{
-      border: 2px solid #111;
-      border-radius: 14px;
-      padding: 10px 12px;
-      flex: 0 0 auto;
-    }
-    .audioTitle{
-      font-weight: 800;
-      text-transform: uppercase;
-      font-size: 14px;
-      margin-bottom: 6px;
-      letter-spacing: .5px;
-    }
-    audio{
-      width: 100%;
-      height: 40px;
-    }
-    .content{
-      flex: 1 1 auto;
-      border: 2px solid #111;
-      border-radius: 14px;
-      padding: 16px 20px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    @media (max-height: 520px){
-      .content{ overflow-y: auto; }
-    }
-    .titulo{
-      font-size: clamp(18px, 2.2vh, 26px);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .4px;
-      margin: 0;
-    }
-    .texto{
-      width: 100%;
-      max-width: 980px;
-      font-size: clamp(16px, 2.2vh, 26px);
-      line-height: 1.25;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.3px;
-    }
-    .texto p{
-      margin: 0 0 10px 0;
-    }
-    .q{
-      border: 2px solid #111;
-      border-radius: 14px;
-      padding: 12px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .qText{
-      font-size: clamp(16px, 2.1vh, 24px);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .3px;
-      line-height: 1.2;
-      margin: 0;
-    }
-    .options{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .opt{
-      border: 2px solid #111;
-      border-radius: 14px;
-      padding: 12px 10px;
-      font-size: clamp(15px, 2vh, 22px);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .3px;
-      text-align: center;
-      user-select: none;
-    }
-    .opt:active{
-      opacity: 0.85;
-      transform: scale(0.99);
-    }
-    .nav{
-      margin-top: auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-    }
-    .nav a{
-      width: 49%;
-      border: 2px solid #111;
-      border-radius: 14px;
-      padding: 10px 12px;
-      font-size: clamp(14px, 2vh, 18px);
-      font-weight: 900;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #111;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+* { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #111;
+  overflow: hidden;
+}
+
+.wrap{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+}
+
+/* AUDIO */
+.audioBox{
+  border: 2px solid #111;
+  border-radius: 14px;
+  padding: 10px 12px;
+  flex: 0 0 auto;
+}
+
+.audioTitle{
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 6px;
+  letter-spacing: .5px;
+}
+
+audio{
+  width: 100%;
+  height: 40px;
+}
+
+/* CONTENIDO */
+.content{
+  flex: 1 1 auto;
+  border: 2px solid #111;
+  border-radius: 14px;
+  padding: 16px 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Scroll solo si pantalla muy pequeña */
+@media (max-height: 520px){
+  .content{ overflow-y: auto; }
+}
+
+.titulo{
+  font-size: clamp(18px, 2.2vh, 26px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  margin: 0;
+}
+
+.texto{
+  width: 100%;
+  max-width: 980px;
+  font-size: clamp(16px, 2.2vh, 26px);
+  line-height: 1.25;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.texto p{
+  margin: 0 0 10px 0;
+}
+
+.q{
+  border: 2px solid #111;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.qText{
+  font-size: clamp(16px, 2.1vh, 24px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.options{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.opt{
+  border: 2px solid #111;
+  border-radius: 14px;
+  padding: 12px 10px;
+  font-size: clamp(15px, 2vh, 22px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.opt:active{
+  opacity: 0.85;
+  transform: scale(0.99);
+}
+
+.nav{
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nav a{
+  width: 49%;
+  border: 2px solid #111;
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-size: clamp(14px, 2vh, 18px);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* --- TEST INTERACTIVO (NUEVO) --- */
+.opt.selected{
+  outline: 4px solid #111;
+  outline-offset: 1px;
+}
+
+.opt.ok{
+  background: #bdf7cc; /* verde claro */
+}
+
+.opt.bad{
+  background: #f7bdbd; /* rojo claro */
+}
+
+#checkBtn{
+  width: 100%;
+  border: 2px solid #111;
+  border-radius: 14px;
+  padding: 12px 10px;
+  font-size: clamp(16px, 2vh, 22px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  background: #fff;
+  cursor: pointer;
+}
+
+#checkBtn:active{
+  opacity: 0.85;
+  transform: scale(0.99);
+}
+
+/* Cuando todo está correcto, se bloquea para que no se estropee */
+.locked .opt{
+  cursor: default;
+  pointer-events: none;
+}
+
+.locked #checkBtn{
+  opacity: 0.8;
+}
 
   </style>
 </head>
@@ -136,41 +200,111 @@
     <section class="audioBox">
       <div class="audioTitle">AUDIO DE LAS PREGUNTAS</div>
       <audio controls preload="metadata">
-        <source src="preguntas-olimpiada.mp3" type="audio/mpeg">
+        <source src="audio/p4-preguntas.mp3" type="audio/mpeg">
         TU NAVEGADOR NO SOPORTA AUDIO.
       </audio>
     </section>
 
     <section class="content">
       <p class="titulo">PREGUNTAS 4</p>
+<div id="quizRoot">
 
-      <div class="q">
-        <p class="qText">1) ¿CÓMO SE LLAMABAN ESOS JUEGOS FAMOSOS?</p>
-        <div class="options">
-          <div class="opt">JUEGOS OLÍMPICOS</div>
-          <div class="opt">JUEGOS DE CAMA</div>
-        </div>
-      </div>
+  <div class="q">
+    <p class="qText">1) ¿CÓMO SE LLAMABAN ESOS JUEGOS FAMOSOS?</p>
+    <div class="options">
+      <div class="opt" data-correct="true">JUEGOS OLÍMPICOS</div>
+      <div class="opt">JUEGOS DE CAMA</div>
+    </div>
+  </div>
 
-      <div class="q">
-        <p class="qText">2) ¿LA IDEA ERA COMPETIR CON…?</p>
-        <div class="options">
-          <div class="opt">RESPETO</div>
-          <div class="opt">TRAMPAS</div>
-        </div>
-      </div>
 
-      <div class="q">
-        <p class="qText">3) HOY, ¿DÓNDE EXISTEN OLIMPIADAS?</p>
-        <div class="options">
-          <div class="opt">EN MUCHOS PAÍSES</div>
-          <div class="opt">SOLO EN MI CASA</div>
-        </div>
-      </div>
+  <div class="q">
+    <p class="qText">2) ¿LA IDEA ERA COMPETIR CON…?</p>
+    <div class="options">
+      <div class="opt" data-correct="true">RESPETO</div>
+      <div class="opt">TRAMPAS</div>
+    </div>
+  </div>
 
+
+  <div class="q">
+    <p class="qText">3) HOY, ¿DÓNDE EXISTEN OLIMPIADAS?</p>
+    <div class="options">
+      <div class="opt" data-correct="true">EN MUCHOS PAÍSES</div>
+      <div class="opt">SOLO EN MI CASA</div>
+    </div>
+  </div>
+
+</div>
+<button id="checkBtn">CHECK</button>
       <div class="nav"><a href="parte-4.html">⬅ VOLVER</a><a href="parte-5.html">➡ SIGUIENTE</a></div>
     </section>
 
   </main>
+
+<script>
+(function(){
+  const root = document.getElementById('quizRoot');
+  if(!root) return;
+
+  const questions = Array.from(root.querySelectorAll('.q'));
+  const checkBtn = document.getElementById('checkBtn');
+
+  function clearMarks(){
+    questions.forEach(q=>{
+      q.querySelectorAll('.opt').forEach(o=>{
+        o.classList.remove('ok','bad');
+      });
+    });
+  }
+
+  // Selección: siempre se puede cambiar hasta que esté todo correcto
+  questions.forEach(q=>{
+    const opts = Array.from(q.querySelectorAll('.opt'));
+    opts.forEach(opt=>{
+      opt.addEventListener('click', ()=>{
+        if(root.classList.contains('locked')) return;
+        opts.forEach(o=>o.classList.remove('selected','ok','bad'));
+        opt.classList.add('selected');
+      });
+    });
+  });
+
+  function doCheck(){
+    if(root.classList.contains('locked')) return;
+
+    clearMarks();
+    let allCorrect = true;
+
+    questions.forEach(q=>{
+      const selected = q.querySelector('.opt.selected');
+      if(!selected){
+        allCorrect = false;
+        return;
+      }
+      if(selected.dataset.correct === "true"){
+        selected.classList.add('ok');
+      }else{
+        selected.classList.add('bad');
+        allCorrect = false;
+      }
+    });
+
+    if(allCorrect){
+      root.classList.add('locked');
+      questions.forEach(q=>{
+        const selected = q.querySelector('.opt.selected');
+        if(selected) selected.classList.add('ok');
+      });
+      checkBtn.textContent = "¡TODO VERDE!";
+    }
+  }
+
+  if(checkBtn){
+    checkBtn.addEventListener('click', doCheck);
+  }
+})();
+</script>
+
 </body>
 </html>
